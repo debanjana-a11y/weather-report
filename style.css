@@ -1,0 +1,49 @@
+* {
+    border: 2px solid red;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.current_report {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.current_report > div {
+    flex: 1;
+}
+
+.temparature_report {
+    display: flex;
+}
+
+.other_informations > div {
+    display: flex;
+    align-items: center;
+}
+
+.value {
+    display: flex;
+    column-gap: 5px;
+    margin: 10px;
+    border: 2px solid blue;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.upcoming_report {
+    display: flex;
+}
+
+.upcoming_report > div {
+    flex: 1;
+}
+
