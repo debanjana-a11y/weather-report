@@ -59,8 +59,9 @@ img {
     /* border: 2px solid blue; */
 }
 
-.unit_1 {
+.unit {
     font-size: 2em;
+    cursor: pointer;
 }
 
 .temperature_value {
