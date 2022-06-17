@@ -79,6 +79,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
     row-gap: 2em;
 }
@@ -86,6 +87,9 @@ img {
 .location_name {
     font-size: 30px;
     font-weight: bold;
+    background-color: transparent;
+    border: none;
+    text-align: center;
 }
 
 .date_time {
