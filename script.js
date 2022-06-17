@@ -106,4 +106,5 @@ function changeBackground(forcast_heading) {
       document.getElementById("weather_icon").src = "./icons/Sunny.png";
       document.body.style.backgroundImage = "url('./images/sunny.jpg')";
   }
+  document.body.style.backgroundRepeat = "no-repeat";
 }
