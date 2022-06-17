@@ -12,7 +12,7 @@
         <div class="current_report">
             <div class="report_today">
                 <div class="temparature_report">
-                    <img src="./icons/Sunny.png" alt="Image of sun">
+                    <img id="weather_icon" src="./icons/Sunny.png" alt="Image of sun">
                     <div class="value temp_value">
                         <div class="temperature_value"></div>
                         <div class="unit">°C</div>
@@ -25,7 +25,9 @@
                         <h2><span>Feels Like</span></h2>
                         <div class="value">
                             <div id="feels_like"></div>
-                            <div>%</div>
+                            <div class="unit">°C</div>
+                            <div>|</div>
+                            <div class="unit">°F</div>
                         </div>
                     </div>
                     <div class="humidity">
@@ -39,7 +41,7 @@
                         <h2><span>Wind</span></h2>
                         <div class="value">
                             <div id="wind_speed_value"></div>
-                            <div>km/h</div>
+                            <div>Km/H</div>
                         </div>
                     </div>
                 </div>

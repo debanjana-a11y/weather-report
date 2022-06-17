@@ -1,5 +1,6 @@
 * {
     /* border: 2px solid red; */
+    color: white;
 }
 
 body {
@@ -59,8 +60,13 @@ img {
     /* border: 2px solid blue; */
 }
 
-.unit {
+.temp_value .unit {
     font-size: 2em;
+    cursor: pointer;
+}
+
+.other_informations .unit {
+    font-size: 1em;
     cursor: pointer;
 }
 
@@ -118,7 +124,12 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
+    background-color: white;
     font-size: 20px;
+}
+
+footer > div {
+    color: black;
+    font-weight: bold;
 }
 

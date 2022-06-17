@@ -4,6 +4,8 @@ const API_KEY = "bb25e181b949c431bd57ca1ac7559d7a";
 getPosition(place.value);
 
 unit = document.getElementsByClassName("unit");
+console.log(unit);
+unit[0].style.fontWeight = "bold";
 unit[0].onclick = change_to_celcius;
 unit[1].onclick = change_to_farenheit;
 
@@ -33,7 +35,9 @@ function getPosition(city_name) {
   geo_position.then( response => {
     return response.json();
   }).then(element => {
-    getWeatherData(element[0].lat, element[0].lon);
+    lat = element[0].lat;
+    lon = element[0].lon;
+    getWeatherData(lat, lon);
   });
 }
 
@@ -53,9 +57,43 @@ function populateData(data) {
   document.getElementById("humidity_value").innerText = data.main.humidity;
   document.getElementById("wind_speed_value").innerText = toKMperH(data.wind.speed);
   document.getElementsByClassName("forcast_heading")[0].innerText = data.weather[0].main;
+  changeBackground(data.weather[0].main);
 }
 
 function toKMperH(speedVal) {
   // in meter per sec to Km/hour converter
   return (speedVal * 3600/1000).toFixed(2);
+}
+
+function changeBackground(forcast_heading) {
+  switch(forcast_heading) {
+    case "Clouds":
+      document.getElementById("weather_icon").src = "./icons/Partial Cloudy.png";
+      document.body.style.backgroundImage = "url('./images/clouds.jpg')";
+    break;
+    case "Clear":
+      document.getElementById("weather_icon").src = "./icons/Sunny.png";
+      document.body.style.backgroundImage = "url('./images/clear_sky.jpg')";
+      break;
+    case "Thunderstorm":
+      document.getElementById("weather_icon").src = "./icons/Thunderstorm.png";
+      document.body.style.backgroundImage = "url('./images/thunderstorm.jpg')";
+      break;
+    case "Drizzle":
+      document.getElementById("weather_icon").src = "./icons/Rainy.png";
+      document.body.style.backgroundImage = "url('./images/drizzle.jpeg')";
+      break;
+    case "Rain":
+      document.getElementById("weather_icon").src = "./icons/Heavy Rainfall.png";
+      document.body.style.backgroundImage = "url('./images/rain.jpg')";
+      break;
+    case "Haze":
+    case "Fog":
+      document.getElementById("weather_icon").src = "./icons/fog.png";
+      document.body.style.backgroundImage = "url('./images/haze.jpeg')";
+    break;
+    default:
+      document.getElementById("weather_icon").src = "./icons/Sunny.png";
+      document.body.style.backgroundImage = "url('./images/sunny.jpg')";
+  }
 }
