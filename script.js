@@ -99,6 +99,7 @@ function changeBackground(forcast_heading) {
       break;
     case "Haze":
     case "Fog":
+    case "Mist":
       document.getElementById("weather_icon").src = "./icons/fog.png";
       document.body.style.backgroundImage = "url('./images/haze.jpeg')";
     break;
