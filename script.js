@@ -57,12 +57,22 @@ function populateData(data) {
   document.getElementById("humidity_value").innerText = data.main.humidity;
   document.getElementById("wind_speed_value").innerText = toKMperH(data.wind.speed);
   document.getElementsByClassName("forcast_heading")[0].innerText = data.weather[0].main;
+  const date_now = new Date();
+  const time_now = formatTime(date_now.getHours()) + ":" +  formatTime(date_now.getMinutes()) + ":" + formatTime(date_now.getSeconds());
+  document.getElementsByClassName("date_time")[0].innerText = date_now.toDateString() + " " + time_now;
   changeBackground(data.weather[0].main);
 }
 
 function toKMperH(speedVal) {
   // in meter per sec to Km/hour converter
   return (speedVal * 3600/1000).toFixed(2);
+}
+
+function formatTime(element) {
+  if (parseInt(element) < 10) {
+    element = "0" + element;
+  }
+  return element;
 }
 
 function changeBackground(forcast_heading) {
