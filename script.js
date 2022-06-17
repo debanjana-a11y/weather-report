@@ -31,7 +31,7 @@ document.querySelector("input").addEventListener("change", function () {
 });
 
 function getPosition(city_name) {
-  const geo_position = fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city_name}&appid=${API_KEY}`);
+  const geo_position = fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city_name}&appid=${API_KEY}`);
   geo_position.then( response => {
     return response.json();
   }).then(element => {
