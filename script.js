@@ -1,5 +1,5 @@
 var place = document.getElementsByClassName("location_name")[0];
-place.defaultValue = "New Delhi";
+place.defaultValue = "Sydney";
 const API_KEY = "bb25e181b949c431bd57ca1ac7559d7a";
 getPosition(place.value);
 
