@@ -115,7 +115,7 @@ img {
     font-style: italic;
 }
 
-.upcoming_report {
+/* .upcoming_report {
     display: flex;
     flex: 1;
     text-align: center;
@@ -124,7 +124,7 @@ img {
 
 .upcoming_report > div {
     flex: 1;
-}
+} */
 
 footer {
     margin: 0;
