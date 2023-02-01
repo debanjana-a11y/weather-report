@@ -8,79 +8,59 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>Weathering</header>
     <main class="content">
-        <div class="current_report">
-            <div class="report_today">
-                <div class="temparature_report">
-                    <img id="weather_icon" src="./icons/Sunny.png" alt="Image of sun">
-                    <div class="value temp_value">
-                        <div class="temperature_value"></div>
-                        <div class="unit">°C</div>
-                        <div>|</div>
-                        <div class="unit">°F</div>
-                    </div>  
+        <div class="report_today">
+           <div class="search">
+                <input type="text" placeholder="Search Location">
+           </div>
+           <div class="report_info">
+                <div class="report_content">
+                    <div class="report">
+                        <p class="location">Kolkata</p>
+                        <p class="current_date">28th JAN 2023</p>
+                        <p class="temparature">35 C</p>
+                    </div>
+                    <img src="./icons/Sunny.png" alt="Picture of Sun">
                 </div>
-                <div class="other_informations">
-                    <div>
-                        <h2><span>Feels Like</span></h2>
-                        <div class="value">
-                            <div id="feels_like"></div>
-                            <div class="unit">°C</div>
-                            <div>|</div>
-                            <div class="unit">°F</div>
-                        </div>
+                <div class="temparature_range">
+                    <div class="highest_temp">
+                        <div>Highest</div>
+                        <div class="temparature">20 C</div>
                     </div>
-                    <div class="humidity">
-                        <h2><span>Humidity</span></h2>
-                        <div class="value">
-                            <div id="humidity_value"></div>
-                            <div>%</div>
-                        </div>
+                    <div class="lowest_temp">
+                        <div>Lowest</div>
+                        <div class="temparature">10 C</div>
                     </div>
-                    <div class="wind">
-                        <h2><span>Wind</span></h2>
-                        <div class="value">
-                            <div id="wind_speed_value"></div>
-                            <div>Km/H</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="location">
-                <input class="location_name" type="text" placeholder="Search Location">
-                <div class="date_time">Friday, 30th April</div>
-                <div class="forcast_heading"></div>
-            </div>
+               </div>
+           </div>
         </div>
-        <!-- <div class="upcoming_report">
-            <div class="day_1">
-                <div class="day">Friday</div>
-                <img src="./icons/Partial Cloudy.png" alt="image of sun">
-                <div class="temparature_range">
-                    <div class="maximum_temp">35°C</div>
-                    <div class="minimum_temp">25°C</div>
+        <div class="forecast">
+           <div class="upcoming_day">
+                <div class="upcoming_date">29th JAN 2023 </div>
+                <div class="upcoming_report">
+                    <p class="upcoming_temparature">23 C - 30 C</p>
+                    <img src="./icons/Sunny.png" alt="Picture of Sun">
+                </div>
+           </div>
+           <div class="upcoming_day">
+                <div class="upcoming_date">30th JAN 2023</div>
+                <div class="upcoming_report">
+                    <p class="upcoming_temparature">23 C - 30 C</p>
+                    <img src="./icons/Sunny.png" alt="Picture of Sun">
                 </div>
             </div>
-            <div class="day_2">
-                <div class="day">Saturday</div>
-                <img src="./icons/Rainy.png" alt="image of sun">
-                <div class="temparature_range">
-                    <div class="maximum_temp">35°C</div>
-                    <div class="minimum_temp">25°C</div>
+           <div class="upcoming_day">
+                <div class="upcoming_date">31st JAN 2023</div>
+                <div class="upcoming_report">
+                    <p class="upcoming_temparature">23 C - 30 C</p>
+                    <img src="./icons/Sunny.png" alt="Picture of Sun">
                 </div>
-            </div>
-            <div class="day_3">
-                <div class="day">Sunday</div>
-                <img src="./icons/Heavy Rainfall.png" alt="image of sun">
-                <div class="temparature_range">
-                    <div class="maximum_temp">35°C</div>
-                    <div class="minimum_temp">25°C</div>
-                </div>
-            </div>
-        </div> -->
+           </div>
+        </div>
     </main>
     <footer>
-        <div>Copyright &copy Debanjana, 2022</div>
+        <div>Copyright &copy Debanjana, 2023</div>
     </footer>
     <script src="script.js"></script>
 </body>

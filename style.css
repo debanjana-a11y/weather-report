@@ -6,18 +6,27 @@
     box-sizing: border-box;
 }
 
-html {
-    height: 100%;
-    /* border: 5px solid yellow; */
+:root {
+    --bg-color: hsla(0, 10%, 0%, 0.3);
+}
+
+html, body {
+    height: 100vh;
 }
 
 body {
-    height: 100%;
-    background-image: url("./images/clear_sky.jpg");
+    background-image: url("./images/thunderstorm.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    row-gap: 2em;
+}
+
+header {
+    padding: 1em 0 0 1em;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 main {
@@ -25,106 +34,157 @@ main {
 }
 
 img {
-    height: 100px;
+    height: 10em;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-}
-
-.current_report {
-    display: flex;
-    flex-wrap: wrap;
-    height: 50%;
-}
-
-.current_report > div {
-    flex: 1;
-}
-
-.temparature_report {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.other_informations > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* grid-template-columns: auto; */
 }
 
 .report_today {
-    padding: 10px;
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    border-radius: 20px;
 }
 
-.value {
-    font-size: larger;
+.search {
     display: flex;
-    align-items: center;
-    column-gap: 5px;
-    margin: 10px;
-    /* border: 2px solid blue; */
+    justify-content: center;
 }
+
+input[type=text] {
+    border-radius: 30px;
+    border: none;
+    font-size: 1.5em;
+    height: 2em;
+    text-align: center;
+}
+
+.report_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    background-color: var(--bg-color);
+    border-radius: 50px;
+    margin: 2em;
+    padding: 2em;
+}
+
+.report_content {
+    width: 100%;
+    display: flex;
+}
+
+.report {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.report > p {
+    font-weight: bold;
+}
+
+.location {
+    font-size: 2em;
+}
+
+.current_date {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.temparature {
+    font-size: 5em;
+}
+
+.report_today {
+    padding: 50px;
+}
+
 
 .temp_value .unit {
     font-size: 2em;
     cursor: pointer;
 }
 
-.other_informations .unit {
-    font-size: 1em;
-    cursor: pointer;
-}
-
-.temperature_value {
-    font-size: 50px;
-    font-weight: bold;
-}
-
 .temparature_range {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
     column-gap: 10px;
 }
 
-.location {
+.highest_temp, .lowest_temp {
+    padding: 2em;
+    width: 15em;
+    height: 5em;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    row-gap: 2em;
+    row-gap: 10px;
+    border-radius: 40px;
+    background-color: var(--bg-color);
 }
 
-.location_name {
-    font-size: 30px;
+.highest_temp > div, .lowest_temp > div{
     font-weight: bold;
-    background-color: transparent;
-    border: none;
-    text-align: center;
+    font-size: 1.5em;
 }
 
-.date_time {
-    font-size: 20px;
+.forecast {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+    padding: 2em;
 }
 
-.forcast_heading {
-    font-size: 2em;
-    font-style: italic;
-}
-
-/* .upcoming_report {
+.upcoming_day {
     display: flex;
     flex: 1;
-    text-align: center;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    font-size: 1vmin;
+    row-gap: 1em;
+    background-color: var(--bg-color);
+    border-radius: 70px;
 }
 
-.upcoming_report > div {
-    flex: 1;
-} */
+.upcoming_date {
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.upcoming_report {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 5em;
+    column-gap: 2em;
+}
+
+.upcoming_temparature {
+    font-size: 4em;
+    font-weight: bold;
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
 
 footer {
     margin: 0;
