@@ -11,11 +11,11 @@
 }
 
 html, body {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 body {
-    background-image: url("./images/thunderstorm.jpg");
+    background-image: url("./images/clear_sky.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -39,8 +39,6 @@ img {
 
 .content {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    /* grid-template-columns: auto; */
 }
 
 .report_today {
@@ -145,26 +143,29 @@ input[type=text] {
 
 .forecast {
     display: flex;
-    flex-direction: column;
-    row-gap: 2em;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 2em;
     padding: 2em;
+    row-gap: 2em;
+    column-gap: 2em;
 }
 
 .upcoming_day {
     display: flex;
-    flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1vmin;
-    row-gap: 1em;
+    font-size: 10px;
+    row-gap: 2em;
+    padding: 2em;
     background-color: var(--bg-color);
     border-radius: 70px;
 }
 
 .upcoming_date {
     font-weight: bold;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .upcoming_report {
@@ -172,12 +173,12 @@ input[type=text] {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 0 5em;
+    padding: 0 1em;
     column-gap: 2em;
 }
 
 .upcoming_temparature {
-    font-size: 4em;
+    font-size: 2em;
     font-weight: bold;
     background-color: var(--bg-color);
     width: 100%;
@@ -185,6 +186,7 @@ input[type=text] {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1em;
     border-radius: 50px;
 }
 
@@ -201,5 +203,16 @@ footer {
 footer > div {
     color: black;
     font-weight: bold;
+}
+
+@media (min-width: 1200px) {
+    .content {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .forecast {
+        flex-direction: column;
+        margin: 0;
+    }
 }
 
